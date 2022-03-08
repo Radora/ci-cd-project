@@ -1,7 +1,7 @@
 package dev.conversionapi.repository;
 
 
-import dev.conversionapi.model.ConversionAPI;
+import dev.conversionapi.model.ConversionRest;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -10,20 +10,19 @@ import java.util.List;
 @Repository
 public class ConversionApiRepository {
 
-    List<ConversionAPI> conversions = new ArrayList<>();
+    private List<ConversionRest> conversions;
 
-
-    public ConversionApiRepository(){
-        conversions.add(
-                new ConversionAPI("kg","g",13.43f)
-        );
+    public ConversionApiRepository() {
+        this.conversions = new ArrayList<>();
     }
 
-    public List<ConversionAPI> findAll(){
+
+
+    public List<ConversionRest> findAll() {
         return conversions;
     }
 
     /*
-    onversionAPI(String fromType, String toType, float fromValue)
+        conversionAPI(String fromType, String toType, float fromValue)
      */
 }
