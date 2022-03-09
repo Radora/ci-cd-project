@@ -1,6 +1,6 @@
 package dev.conversionapi.controller;
 
-import dev.conversionapi.model.ConversionRest;
+import dev.conversionapi.model.ConversionRestResponseModel;
 import dev.conversionapi.model.UnitConversionRequestModel;
 import dev.conversionapi.repository.ConversionApiRepository;
 import org.springframework.http.HttpStatus;
@@ -18,12 +18,22 @@ public class ConversionApiController {
         this.repository = repository;
     }
 
-    @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<ConversionRest> createNewConversion(@RequestBody UnitConversionRequestModel unitConversionRequest) {
+    @PostMapping(
+            consumes = {MediaType.APPLICATION_JSON_VALUE},
+            produces = {MediaType.APPLICATION_JSON_VALUE}
+    )
+    public ResponseEntity<ConversionRestResponseModel> createNewConversion(@RequestBody UnitConversionRequestModel unitConversionRequest) {
 
-        ConversionRest returnValue = new ConversionRest(unitConversionRequest.getFromType(), unitConversionRequest.getToType(), unitConversionRequest.getFromValue());
 
-        return new ResponseEntity<ConversionRest>(returnValue, HttpStatus.OK);
+        ConversionRestResponseModel response  = repository.convert(unitConversionRequest);
+
+        if (response.isValid()){
+            return new ResponseEntity<ConversionRestResponseModel>(response, HttpStatus.OK);
+
+        }else {
+            return new ResponseEntity<ConversionRestResponseModel>(response, HttpStatus.BAD_REQUEST);
+        }
+
     }
 
 }

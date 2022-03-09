@@ -1,6 +1,6 @@
 package dev.conversionapi.model;
 
-public class ConversionRest {
+public class ConversionRestResponseModel {
 
     private boolean valid;
     private String fromType;
@@ -9,16 +9,14 @@ public class ConversionRest {
     private float result;
 
 
-    public ConversionRest() {
+    public ConversionRestResponseModel() {
     }
 
-    public ConversionRest(String fromType, String toType, float fromValue) {
-        this.fromType = fromType;
-        this.toType = toType;
-        this.fromValue = fromValue;
-        this.valid = true;
-        this.result = 0.993f;
-        // logic?
+    public ConversionRestResponseModel(UnitConversionRequestModel request) {
+
+        this.fromType = request.getFromType();
+        this.toType = request.getToType();
+        this.fromValue = request.getFromValue();
     }
 
     public boolean isValid() {
