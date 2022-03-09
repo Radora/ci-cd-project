@@ -24,10 +24,10 @@ public class ConversionApiController {
     )
     public ResponseEntity<ConversionRestResponseModel> createNewConversion(@RequestBody UnitConversionRequestModel unitConversionRequest) {
 
-
         ConversionRestResponseModel response  = repository.convert(unitConversionRequest);
 
         if (response.isValid()){
+
             return new ResponseEntity<ConversionRestResponseModel>(response, HttpStatus.OK);
 
         }else {
