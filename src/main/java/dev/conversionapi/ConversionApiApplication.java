@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ConversionApiApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(ConversionApiApplication.class, args);
     }
 
