@@ -5,6 +5,10 @@ import dev.conversionapi.model.UnitConversionRequestModel;
 
 public interface ConversionStrategy {
 
-    ConversionRestResponseModel convert(UnitConversionRequestModel conversionRequest);
+    boolean requestIsValid(UnitConversionRequestModel conversionRequest);
+
+    boolean toTypeIsValid(String toType);
+
+    float getConvertedValue(float value);
 
 }
