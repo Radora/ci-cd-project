@@ -11,5 +11,5 @@ public class ConvertCelsiusRepoTest {
 
     @Test
     public void ConvertCToF (){
-        assertEquals(0,32, C_TO_F_STRATEGY.getConvertedValue(0));}
+        assertEquals(0,33, C_TO_F_STRATEGY.getConvertedValue(0));}
 }
