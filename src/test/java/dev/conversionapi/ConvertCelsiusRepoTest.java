@@ -10,6 +10,9 @@ public class ConvertCelsiusRepoTest {
     public static final ConvertCelsiusRepo C_TO_F_STRATEGY = new ConvertCelsiusRepo();
 
     @Test
-    public void ConvertCToF (){
-        assertEquals(0,33, C_TO_F_STRATEGY.getConvertedValue(0));}
+    public void ConvertCToF () {
+        float result = C_TO_F_STRATEGY.getConvertedValue(0);
+        assertEquals(32, result);
+    }
 }
+// 32 F = 0 C (fromValue)

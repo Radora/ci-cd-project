@@ -1,0 +1,11 @@
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\model\UnitConversionRequestModel.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\controller\ConversionApiController.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\strategy\ConversionStrategy.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\ConversionApiApplication.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\model\ConversionRestResponseModel.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\repository\ConvertFahrenheitRepo.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\repository\ConvertGramRepo.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\model\InvalidRequestResponseModel.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\repository\ConvertCelsiusRepo.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\repository\ConvertKilogramRepo.java
+C:\Users\Dell\IdeaProjects\WaffJava\demo1\ci-cd-project\src\main\java\dev\conversionapi\repository\ConversionApiRepository.java

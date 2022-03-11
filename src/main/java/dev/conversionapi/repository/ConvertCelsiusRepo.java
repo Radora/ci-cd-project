@@ -1,6 +1,5 @@
 package dev.conversionapi.repository;
 
-import dev.conversionapi.model.ConversionRestResponseModel;
 import dev.conversionapi.model.UnitConversionRequestModel;
 import dev.conversionapi.strategy.ConversionStrategy;
 
@@ -24,6 +23,6 @@ public class ConvertCelsiusRepo implements ConversionStrategy {
 
     @Override
     public float getConvertedValue(float fromValue) {
-        return fromValue * 9 / 5 + 32;
+        return ((fromValue * 9 / 5) + 32);
     }
 }

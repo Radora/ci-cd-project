@@ -1,6 +1,6 @@
 package dev.conversionapi.repository;
 
-import dev.conversionapi.model.ConversionRestResponseModel;
+
 import dev.conversionapi.model.UnitConversionRequestModel;
 import dev.conversionapi.strategy.ConversionStrategy;
 
@@ -24,6 +24,6 @@ public class ConvertFahrenheitRepo implements ConversionStrategy {
 
     @Override
     public float getConvertedValue(float fromValue) {
-        return (fromValue - 32) * 5 / 9;
+        return ((fromValue - 32.0f) * 5.0f / 9.0f);
     }
 }
